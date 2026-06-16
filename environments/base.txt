@@ -1,0 +1,6 @@
+# Base dependencies for PyLabKit
+#
+# Note: NI-VISA is not installed with pip.
+# It must be installed separately from National Instruments.
+
+pyvisa
