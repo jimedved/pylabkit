@@ -1,4 +1,4 @@
-from pylabkit.instruments.basic import VisaInstrument
+from pylabkit.instruments.base import VisaInstrument
 
 
 def main() -> None:
