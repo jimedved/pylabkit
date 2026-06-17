@@ -1,0 +1,31 @@
+﻿[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pylabkit"
+version = "0.1.0"
+description = "Modular Python toolkit for laboratory instrument control using PyVISA."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Juan Medved" }
+]
+dependencies = [
+    "pyvisa"
+]
+
+[project.optional-dependencies]
+gui = [
+    "PyQt6",
+    "matplotlib"
+]
+
+dev = [
+    "pytest",
+    "ruff",
+    "build"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
