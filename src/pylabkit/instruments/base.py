@@ -1,6 +1,7 @@
+from __future__ import annotations #must go FIRST
 from typing import Any #for create objects of "Any" type
 from pylabkit.visa import VisaSession # import the class created in visa.py, to open VISA using NI-VISA
-from __future__ import annotations
+
 
 #Create a basic class for all instruments
 

@@ -2,7 +2,7 @@ from pylabkit.instruments.base import VisaInstrument
 
 
 def main() -> None:
-    resource_name = "GPIB0::17::INSTR"
+    resource_name = "GPIB0::4::INSTR"
 
     with VisaInstrument(resource_name) as instrument:
         print("Connected instrument:")
