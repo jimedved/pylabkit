@@ -1,10 +1,13 @@
 from __future__ import annotations
 
-from abc import ABC, abstractmethod
+from abc import ABC, abstractmethod #ABC = abstract base class
 from dataclasses import dataclass
 
 
-@dataclass
+@dataclass #this is a class which objective is to STORE DATA
+ #this writes the __init__, do not need to write the constructor
+ #also can be used to print results in a better way
+ # This class represents a result of a measurement, do not control any instrument, only save data
 class LCRReading:
     """Generic measurement result returned by an LCR meter.
 
@@ -32,12 +35,15 @@ class LCRReading:
     raw: str | None = None
 
 
-class LCRMeter(ABC):
+class LCRMeter(ABC): #imports ABC, this is an ABSTRACT BASE CLASS
+    # lcr=LCRMeter() is wrong, because is an ABC... we need to create a new class calling LCRMeter
     """Abstract interface for LCR meters.
-
     This class defines the common operations that any LCR meter driver
     should implement. It does not contain instrument-specific commands.
     """
+
+# the abstractmethod is useful to say that this method should exist, but it must be implemented by the derived class, is not implemented here
+# this is useful because then we can write GENERIC CODE, without the specific implementation of the function
 
     @abstractmethod
     def set_frequency(self, frequency_hz: float) -> None:
@@ -73,6 +79,7 @@ class LCRMeter(ABC):
     def measure(self) -> LCRReading:
         """Perform a measurement and return the result."""
         pass
+
 
     def configure_measurement(
         self,
