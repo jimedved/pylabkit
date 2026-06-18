@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import time
 
-from pylabkit.instruments.basic import VisaInstrument
+from pylabkit.instruments.base import VisaInstrument
 from pylabkit.instruments.lcr import LCRMeter, LCRReading
 
 
