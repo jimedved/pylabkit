@@ -3,7 +3,7 @@ import time
 from pylabkit.instruments.base import VisaInstrument
 
 
-RESOURCE_NAME = "GPIB0::4::INSTR"
+RESOURCE_NAME = "GPIB0::17::INSTR"
 
 
 def safe_write(instrument: VisaInstrument, command: str, delay_s: float = 0.3) -> None:
